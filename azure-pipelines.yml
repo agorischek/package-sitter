@@ -24,16 +24,29 @@ steps:
     npm version patch
   displayName: 'Bump version'
 
-- task: CreatePullRequest@1
+- task: azuredevopsgithub@0
   inputs:
-    repoType: 'GitHub'
-    githubEndpoint: 'agorischek'
-    githubRepository: '$(Build.Repository.Name)'
-    sourceBranch: 'version-bump'
-    targetBranch: 'master'
-    title: 'Bump version after autorelease'
-    description: 'Bump version after autorelease'
-    passPullRequestIdBackToADO: true
+    gitHubConnection: 'agorischek'
+    method: 'POST'
+    body: |
+      {
+        "title": "Version bump",
+        "body": "Version bump",
+        "head": "version-bump",
+        "base": "master"
+      }
+    githubrestapiurl: 'https:/api.github.com/repos/agorischek/package-sitter/pulls'
+
+# - task: CreatePullRequest@1
+#   inputs:
+#     repoType: 'GitHub'
+#     githubEndpoint: 'agorischek'
+#     githubRepository: '$(Build.Repository.Name)'
+#     sourceBranch: 'version-bump'
+#     targetBranch: 'master'
+#     title: 'Bump version after autorelease'
+#     description: 'Bump version after autorelease'
+#     passPullRequestIdBackToADO: true
 
 # - script: |
 #     git config user.email "alex.gorischek@gmail.com"
