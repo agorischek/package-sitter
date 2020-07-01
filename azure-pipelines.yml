@@ -12,6 +12,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    git checkout master
+  displayName: Check out master
+
+- script: |
     git config user.email "alex.gorischek@gmail.com"
     git config user.name "Alex Gorischek via Azure Pipeline"
   displayName: Set Git config
@@ -20,15 +24,15 @@ steps:
     npm version patch
   displayName: 'Bump version'
 
-- task: CreatePullRequest@1
-  inputs:
-    repoType: 'GitHub'
-    githubEndpoint: 'agorischek'
-    githubRepository: '$(Build.Repository.Name)'
-    sourceBranch: '$(Build.SourceBranch)'
-    targetBranch: 'version-bump'
-    title: 'Bump version after autorelease'
-    passPullRequestIdBackToADO: true
+# - task: CreatePullRequest@1
+#   inputs:
+#     repoType: 'GitHub'
+#     githubEndpoint: 'agorischek'
+#     githubRepository: '$(Build.Repository.Name)'
+#     sourceBranch: '$(Build.SourceBranch)'
+#     targetBranch: 'version-bump'
+#     title: 'Bump version after autorelease'
+#     passPullRequestIdBackToADO: true
 
 # - script: |
 #     git config user.email "alex.gorischek@gmail.com"
