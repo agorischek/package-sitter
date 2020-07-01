@@ -1,0 +1,23 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm version patch
+  displayName: 'Bump version'
+
+- script: |
+    git commit -m "Bump version"
+  displayName: 'Commit version'
+
+- script: |
+    git push origin master
+  displayName: 'Git push
