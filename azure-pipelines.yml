@@ -26,5 +26,6 @@ steps:
 #   displayName: Commit version
 
 - script: |
-    git push origin master
+    git show-ref
+    git push origin HEAD:master
   displayName: Git push
