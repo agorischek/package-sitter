@@ -1,5 +1,6 @@
-trigger:
-- master
+trigger: none
+
+pr: none
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -19,13 +20,23 @@ steps:
     npm version patch
   displayName: 'Bump version'
 
+- task: CreatePullRequest@1
+  inputs:
+    repoType: 'GitHub'
+    githubEndpoint: 'agorischek'
+    githubRepository: '$(Build.Repository.Name)'
+    sourceBranch: '$(Build.SourceBranch)'
+    targetBranch: 'version-bump'
+    title: 'Bump version after autorelease'
+    passPullRequestIdBackToADO: true
+
 # - script: |
 #     git config user.email "alex.gorischek@gmail.com"
 #     git config user.name "Alex Gorischek via Azure Pipeline"
 #     git commit -m "Bump version"
 #   displayName: Commit version
 
-- script: |
-    git show-ref
-    git push origin HEAD:master
-  displayName: Git push
+# - script: |
+#     git show-ref
+#     git push origin HEAD:master
+#   displayName: Git push
