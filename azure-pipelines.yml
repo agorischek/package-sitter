@@ -11,14 +11,19 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    git config user.email "alex.gorischek@gmail.com"
+    git config user.name "Alex Gorischek via Azure Pipeline"
+  displayName: Set Git config
+
+- script: |
     npm version patch
   displayName: 'Bump version'
 
-- script: |
-    git config user.email "alex.gorischek@gmail.com"
-    git config user.name "Alex Gorischek via Azure Pipeline"
-    git commit -m "Bump version"
-  displayName: Commit version
+# - script: |
+#     git config user.email "alex.gorischek@gmail.com"
+#     git config user.name "Alex Gorischek via Azure Pipeline"
+#     git commit -m "Bump version"
+#   displayName: Commit version
 
 - script: |
     git push origin master
