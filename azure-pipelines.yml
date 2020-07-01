@@ -24,18 +24,26 @@ steps:
     npm version patch
   displayName: 'Bump version'
 
+- script: |
+    git rev-parse HEAD
+  displayName: 'Get HEAD commit'
+
+
 - task: azuredevopsgithub@0
   inputs:
     gitHubConnection: 'agorischek'
-    method: 'POST'
+    method: 'PUT'
     body: |
       {
-        "title": "Version bump",
-        "body": "Version bump",
-        "head": "version-bump",
-        "base": "master"
+        "message": "Bump version",
+        "committer": {
+          "name": "Alex Gorischek",
+          "email": "alex.gorischek@gmail.com"
+        },
+        "content": "bXkgbmV3IGZpbGUgY29udGVudHM="
       }
-    githubrestapiurl: 'https://api.github.com/repos/agorischek/package-sitter/pulls'
+    githubrestapiurl: 'https://api.github.com/repos/agorischek/package-sitter/contents/package.json'
+
 
 # - task: CreatePullRequest@1
 #   inputs:
