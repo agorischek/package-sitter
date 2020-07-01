@@ -29,7 +29,7 @@ steps:
     repoType: 'GitHub'
     githubEndpoint: 'agorischek'
     githubRepository: '$(Build.Repository.Name)'
-    sourceBranch: '$(Build.SourceBranch)'
+    sourceBranch: 'version-bump'
     targetBranch: 'master'
     title: 'Bump version after autorelease'
     description: 'Bump version after autorelease'
