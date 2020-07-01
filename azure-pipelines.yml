@@ -35,7 +35,7 @@ steps:
         "head": "version-bump",
         "base": "master"
       }
-    githubrestapiurl: 'https:/api.github.com/repos/agorischek/package-sitter/pulls'
+    githubrestapiurl: 'https://api.github.com/repos/agorischek/package-sitter/pulls'
 
 # - task: CreatePullRequest@1
 #   inputs:
