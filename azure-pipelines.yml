@@ -12,8 +12,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    git checkout version-bump
-  displayName: Check out new branch
+    git switch -c version-bump
+  displayName: Switch to new branch
 
 - script: |
     git config user.email "alex.gorischek@gmail.com"
