@@ -1,0 +1,27 @@
+{
+  "name": "package-sitter",
+  "version": "1.0.0",
+  "description": "Automated smoke testing for my published packages",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agorischek/package-sitter.git"
+  },
+  "author": "Alex Gorischek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agorischek/package-sitter/issues"
+  },
+  "homepage": "https://github.com/agorischek/package-sitter#readme",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "louk": "^2.0.13",
+    "markunit": "^1.0.4",
+    "multigrain": "^2.0.1"
+  }
+}
