@@ -1,2 +1,2 @@
 # Package Sitter
-Automated smoke testing for my published packages
+Automated post-publish smoke testing for my packages
