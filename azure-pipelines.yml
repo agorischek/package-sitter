@@ -15,6 +15,8 @@ steps:
   displayName: 'Bump version'
 
 - script: |
+    git config user.email "alex.gorischek@gmail.com"
+    git config user.name "Alex Gorischek via Azure Pipeline"
     git commit -m "Bump version"
   displayName: Commit version
 
