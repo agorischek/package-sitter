@@ -30,8 +30,9 @@ steps:
     githubEndpoint: 'agorischek'
     githubRepository: '$(Build.Repository.Name)'
     sourceBranch: '$(Build.SourceBranch)'
-    targetBranch: 'version-bump'
+    targetBranch: 'master'
     title: 'Bump version after autorelease'
+    description: 'Bump version after autorelease'
     passPullRequestIdBackToADO: true
 
 # - script: |
