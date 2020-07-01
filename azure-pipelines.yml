@@ -40,7 +40,7 @@ steps:
 #     git commit -m "Bump version"
 #   displayName: Commit version
 
-# - script: |
-#     git show-ref
-#     git push origin HEAD:master
-#   displayName: Git push
+- script: |
+    git show-ref
+    git push origin master
+  displayName: Git push
