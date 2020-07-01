@@ -16,8 +16,8 @@ steps:
 
 - script: |
     git commit -m "Bump version"
-  displayName: 'Commit version'
+  displayName: Commit version
 
 - script: |
     git push origin master
-  displayName: 'Git push
+  displayName: Git push
