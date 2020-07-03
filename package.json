@@ -23,6 +23,7 @@
     "emj": "0.0.4",
     "louk": "^1.0.0",
     "markunit": "^1.0.4",
-    "multigrain": "^2.0.1"
+    "multigrain": "^2.0.1",
+    "sibylline": "0.0.2"
   }
 }
