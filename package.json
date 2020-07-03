@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "emj": "0.0.4",
-    "louk": "^2.0.13",
+    "louk": "^2.0.14",
     "markunit": "^1.0.4",
     "multigrain": "^2.0.1"
   }
