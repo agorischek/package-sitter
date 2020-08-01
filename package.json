@@ -20,7 +20,7 @@
     "jest": "^26.2.2"
   },
   "dependencies": {
-    "emj": "0.0.5",
+    "emj": "0.0.6",
     "louk": "^2.0.14",
     "markunit": "^1.0.6",
     "multigrain": "^2.0.1",
