@@ -22,7 +22,7 @@
   "dependencies": {
     "emj": "0.0.6",
     "louk": "^2.0.14",
-    "markunit": "^1.0.6",
+    "markunit": "^1.0.7",
     "multigrain": "^2.0.1",
     "sibylline": "0.0.2"
   }
