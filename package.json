@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/agorischek/package-sitter#readme",
   "devDependencies": {
-    "jest": "^26.6.1"
+    "jest": "^26.6.2"
   },
   "dependencies": {
     "emj": "0.0.7",
