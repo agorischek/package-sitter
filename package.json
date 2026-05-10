@@ -23,14 +23,8 @@
     "emj": "^0.0.8",
     "louk": "^2.0.14",
     "markdown-it": "^14.1.1",
-    "markunit": "^1.0.7",
-    "multigrain": "^2.0.3",
-    "showdown": "file:vendor/showdown",
-    "sibylline": "^0.0.2"
-  },
-  "overrides": {
-    "markunit": {
-      "showdown": "file:vendor/showdown"
-    }
+    "markunit": "^1.0.8",
+    "multigrain": "^2.0.4",
+    "sibylline": "^0.0.3"
   }
 }
