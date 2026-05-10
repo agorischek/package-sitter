@@ -1,6 +1,6 @@
 const markunit = require("markunit");
 const readme = markunit(
-  "#Markunit\n\nMarkunit is a Markdown unit testing library.\n\n```sh\nnpm i -D markunit\n```"
+  "# Markunit\n\nMarkunit is a Markdown unit testing library."
 );
 
 test("should have a title", () => {
