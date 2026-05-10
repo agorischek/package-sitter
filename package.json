@@ -4,7 +4,7 @@
   "description": "Automated smoke testing for my published packages",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "vitest run --globals tests/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/agorischek/package-sitter#readme",
   "devDependencies": {
-    "jest": "^30.4.2"
+    "vitest": "^4.1.5"
   },
   "dependencies": {
-    "emj": "^0.0.7",
+    "emj": "^0.0.8",
     "louk": "^2.0.14",
     "markdown-it": "^14.1.1",
     "markunit": "^1.0.7",
