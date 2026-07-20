@@ -82,6 +82,13 @@ export async function smoke(importedPackageName, imported) {
     case "sibylline":
       assert.equal(imported.default.render("a|||(2018)b|||c", 2018), "abc");
       break;
+    case "verify-repo":
+      assert.equal(typeof imported.verify, "object");
+      assert.equal(typeof imported.createRuntime, "function");
+      assert.equal(imported.default, imported.verify);
+      assert(imported.createRuntime() instanceof imported.RepoVerificationRuntime);
+      assert(imported.collectDocs().length > 0);
+      break;
   }
 }
 

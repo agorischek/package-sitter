@@ -29,8 +29,7 @@ This structure keeps a vulnerability or packaging problem in one published packa
 | [`multigrain`](https://www.npmjs.com/package/multigrain) | `multigrain` |
 | [`semantic-expect`](https://www.npmjs.com/package/semantic-expect) | `semantic-expect` |
 | [`sibylline`](https://www.npmjs.com/package/sibylline) | `sibylline` |
-
-`verify-repo` is intentionally deferred until a release is available that installs without unpublished workspace peer dependencies.
+| [`verify-repo`](https://www.npmjs.com/package/verify-repo) | `verify-repo` |
 
 ## Adding a package
 
