@@ -58,13 +58,19 @@ jobs:
           cache-dependency-path: fixtures/${{ matrix.fixture }}/package-lock.json
 
       - name: Install fixture
-        run: npm ci --ignore-scripts --prefix "fixtures/${{ matrix.fixture }}"
+        env:
+          FIXTURE: ${{ matrix.fixture }}
+        run: npm ci --ignore-scripts --prefix "fixtures/$FIXTURE"
 
       - name: Audit fixture
-        run: npm audit --audit-level=high --prefix "fixtures/${{ matrix.fixture }}"
+        env:
+          FIXTURE: ${{ matrix.fixture }}
+        run: npm audit --audit-level=high --prefix "fixtures/$FIXTURE"
 
       - name: Smoke test fixture
-        run: npm test --prefix "fixtures/${{ matrix.fixture }}"
+        env:
+          FIXTURE: ${{ matrix.fixture }}
+        run: npm test --prefix "fixtures/$FIXTURE"
 
   verify:
     name: Verify

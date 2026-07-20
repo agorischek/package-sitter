@@ -12,7 +12,12 @@ function runDollarlint() {
     ".bin",
     process.platform === "win32" ? "dollarlint.cmd" : "dollarlint",
   );
-  const result = spawnSync(executable, ["--help"], { stdio: "inherit" });
+  const result =
+    process.platform === "win32"
+      ? spawnSync(process.env.ComSpec ?? "cmd.exe", ["/d", "/s", "/c", executable, "--help"], {
+          stdio: "inherit",
+        })
+      : spawnSync(executable, ["--help"], { stdio: "inherit" });
   assert.equal(result.status, 0, "dollarlint --help failed");
 }
 
