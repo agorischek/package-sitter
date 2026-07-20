@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-emj",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs emj" },
+  "dependencies": { "emj": "0.0.8" }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-semantic-expect",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs semantic-expect" },
+  "dependencies": { "semantic-expect": "0.0.6" }
+}

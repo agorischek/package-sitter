@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-fill-in-the-blank",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs fill-in-the-blank" },
+  "dependencies": { "fill-in-the-blank": "0.0.5" }
+}

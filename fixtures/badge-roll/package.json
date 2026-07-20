@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-badge-roll",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs badge-roll" },
+  "dependencies": { "badge-roll": "0.1.0" }
+}

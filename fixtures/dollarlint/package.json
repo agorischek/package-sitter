@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-dollarlint",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs dollarlint" },
+  "dependencies": { "dollarlint": "0.1.16" }
+}

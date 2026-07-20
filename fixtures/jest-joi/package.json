@@ -1,0 +1,11 @@
+{
+  "name": "package-sitter-jest-joi",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs jest-joi" },
+  "dependencies": {
+    "jest": "30.4.2",
+    "jest-joi": "1.1.17",
+    "joi": "18.2.1"
+  }
+}
