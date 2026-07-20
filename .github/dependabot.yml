@@ -28,6 +28,7 @@ updates:
         - multigrain
         - semantic-expect
         - sibylline
+        - verify-repo
     allow:
       - dependency-name: "@e-n-v/env"
       - dependency-name: apposite
@@ -46,6 +47,7 @@ updates:
       - dependency-name: multigrain
       - dependency-name: semantic-expect
       - dependency-name: sibylline
+      - dependency-name: verify-repo
     versioning-strategy: increase
     open-pull-requests-limit: 25
 

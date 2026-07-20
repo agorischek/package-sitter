@@ -16,4 +16,5 @@ export const fixtures = [
   "multigrain",
   "semantic-expect",
   "sibylline",
+  "verify-repo",
 ];
