@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-multigrain",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs multigrain" },
+  "dependencies": { "multigrain": "2.0.4" }
+}

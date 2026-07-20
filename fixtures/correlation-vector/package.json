@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-correlation-vector",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs correlation-vector" },
+  "dependencies": { "correlation-vector": "0.0.3" }
+}

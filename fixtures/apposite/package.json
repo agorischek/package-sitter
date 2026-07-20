@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-apposite",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs apposite" },
+  "dependencies": { "apposite": "0.0.4" }
+}

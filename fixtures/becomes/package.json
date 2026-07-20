@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-becomes",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs becomes" },
+  "dependencies": { "becomes": "0.1.0" }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-sibylline",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs sibylline" },
+  "dependencies": { "sibylline": "0.0.3" }
+}

@@ -1,0 +1,61 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directories:
+      - "/fixtures/*"
+    schedule:
+      interval: cron
+      cronjob: "0 */6 * * *"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 3
+      exclude:
+        - "@e-n-v/env"
+        - apposite
+        - badge-roll
+        - becomes
+        - check-1-2
+        - correlation-vector
+        - dollarlint
+        - elementory
+        - emj
+        - fill-in-the-blank
+        - jest-joi
+        - louk
+        - markdown-it
+        - markunit
+        - multigrain
+        - semantic-expect
+        - sibylline
+    allow:
+      - dependency-name: "@e-n-v/env"
+      - dependency-name: apposite
+      - dependency-name: badge-roll
+      - dependency-name: becomes
+      - dependency-name: check-1-2
+      - dependency-name: correlation-vector
+      - dependency-name: dollarlint
+      - dependency-name: elementory
+      - dependency-name: emj
+      - dependency-name: fill-in-the-blank
+      - dependency-name: jest-joi
+      - dependency-name: louk
+      - dependency-name: markdown-it
+      - dependency-name: markunit
+      - dependency-name: multigrain
+      - dependency-name: semantic-expect
+      - dependency-name: sibylline
+    versioning-strategy: increase
+    open-pull-requests-limit: 25
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/Los_Angeles
+    cooldown:
+      default-days: 3
+    open-pull-requests-limit: 5

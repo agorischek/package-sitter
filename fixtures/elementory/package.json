@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-elementory",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs elementory" },
+  "dependencies": { "elementory": "1.2.6" }
+}

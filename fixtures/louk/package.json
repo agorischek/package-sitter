@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-louk",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs louk" },
+  "dependencies": { "louk": "2.0.14" }
+}

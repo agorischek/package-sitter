@@ -1,0 +1,7 @@
+{
+  "name": "package-sitter-e-n-v-env",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node ../../scripts/smoke.mjs @e-n-v/env" },
+  "dependencies": { "@e-n-v/env": "0.0.7" }
+}
