@@ -5,8 +5,8 @@ updates:
     directories:
       - "/fixtures/*"
     schedule:
-      interval: cron
-      cronjob: "0 */6 * * *"
+      interval: daily
+      time: "09:00"
       timezone: America/Los_Angeles
     cooldown:
       default-days: 3
