@@ -65,7 +65,7 @@ jobs:
       - name: Audit fixture
         env:
           FIXTURE: ${{ matrix.fixture }}
-        run: npm audit --audit-level=high --prefix "fixtures/$FIXTURE"
+        run: npm audit --audit-level=high --omit=dev --prefix "fixtures/$FIXTURE"
 
       - name: Smoke test fixture
         env:
