@@ -6,6 +6,6 @@
   "devDependencies": {
     "jest": "30.4.2",
     "jest-joi": "1.1.19",
-    "joi": "18.2.1"
+    "joi": "18.2.3"
   }
 }
