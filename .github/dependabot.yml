@@ -29,25 +29,6 @@ updates:
         - semantic-expect
         - sibylline
         - verify-repo
-    allow:
-      - dependency-name: "@e-n-v/env"
-      - dependency-name: apposite
-      - dependency-name: badge-roll
-      - dependency-name: becomes
-      - dependency-name: check-1-2
-      - dependency-name: correlation-vector
-      - dependency-name: dollarlint
-      - dependency-name: elementory
-      - dependency-name: emj
-      - dependency-name: fill-in-the-blank
-      - dependency-name: jest-joi
-      - dependency-name: louk
-      - dependency-name: markdown-it
-      - dependency-name: markunit
-      - dependency-name: multigrain
-      - dependency-name: semantic-expect
-      - dependency-name: sibylline
-      - dependency-name: verify-repo
     versioning-strategy: increase
     open-pull-requests-limit: 25
 
