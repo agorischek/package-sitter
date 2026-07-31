@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs markdown-it" },
-  "dependencies": { "markdown-it": "14.3.0" }
+  "dependencies": { "markdown-it": "15.0.0" }
 }
