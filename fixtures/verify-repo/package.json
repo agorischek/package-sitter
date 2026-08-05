@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs verify-repo" },
-  "dependencies": { "verify-repo": "0.0.4" }
+  "dependencies": { "verify-repo": "0.0.5" }
 }
