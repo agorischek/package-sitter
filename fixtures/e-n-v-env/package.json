@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs @e-n-v/env" },
-  "dependencies": { "@e-n-v/env": "0.0.8" }
+  "dependencies": { "@e-n-v/env": "0.0.9" }
 }
