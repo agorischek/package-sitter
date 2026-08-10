@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs multigrain" },
-  "dependencies": { "multigrain": "2.0.4" }
+  "dependencies": { "multigrain": "3.0.0" }
 }
