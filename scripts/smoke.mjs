@@ -21,7 +21,7 @@ function runDollarlint() {
   assert.equal(result.status, 0, "dollarlint --help failed");
 }
 
-export async function smoke(importedPackageName, imported) {
+export async function smoke(importedPackageName, imported, auxiliary = {}) {
   assert(
     Object.keys(imported).length > 0,
     `${importedPackageName} has no public exports`,
@@ -74,7 +74,12 @@ export async function smoke(importedPackageName, imported) {
       imported.default("# Hello").markup.has("h1");
       break;
     case "multigrain":
-      assert.equal(imported.default.yaml({ key: "value" }), "key: value\n");
+      if (typeof imported.default?.yaml === "function") {
+        assert.equal(imported.default.yaml({ key: "value" }), "key: value\n");
+      } else {
+        assert.equal(typeof imported.convert, "function");
+        assert.equal(auxiliary.multigrainYaml.stringify({ key: "value" }), "key: value\n");
+      }
       break;
     case "semantic-expect":
       assert.equal(typeof imported.makeOpenAIMatchers, "function");
@@ -103,8 +108,11 @@ async function main() {
   const consumer = [
     "const packageName = process.env.PACKAGE_SITTER_PACKAGE;",
     "const imported = await import(packageName);",
+    "const auxiliary = packageName === 'multigrain' && typeof imported.default?.yaml !== 'function'",
+    "  ? { multigrainYaml: await import('multigrain/yaml') }",
+    "  : {};",
     "const { smoke } = await import(process.env.PACKAGE_SITTER_SMOKE_MODULE);",
-    "await smoke(packageName, imported);",
+    "await smoke(packageName, imported, auxiliary);",
   ].join("\n");
   const result = spawnSync(process.execPath, ["--input-type=module", "--eval", consumer], {
     cwd: process.cwd(),
