@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs fill-in-the-blank" },
-  "dependencies": { "fill-in-the-blank": "0.0.5" }
+  "dependencies": { "fill-in-the-blank": "0.0.6" }
 }
