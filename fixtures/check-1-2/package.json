@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs check-1-2" },
-  "dependencies": { "check-1-2": "0.0.7" }
+  "dependencies": { "check-1-2": "0.0.8" }
 }
