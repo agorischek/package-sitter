@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs semantic-expect" },
-  "dependencies": { "semantic-expect": "0.0.6" }
+  "dependencies": { "semantic-expect": "0.0.7" }
 }
