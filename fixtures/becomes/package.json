@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs becomes" },
-  "dependencies": { "becomes": "0.1.0" }
+  "dependencies": { "becomes": "0.1.1" }
 }
