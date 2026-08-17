@@ -3,5 +3,5 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs markunit" },
-  "dependencies": { "markunit": "1.0.8" }
+  "dependencies": { "markunit": "1.0.9" }
 }
