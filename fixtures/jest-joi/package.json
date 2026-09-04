@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs jest-joi" },
   "devDependencies": {
-    "jest": "30.5.0",
+    "jest": "30.5.1",
     "jest-joi": "1.1.19",
     "joi": "18.2.5"
   },
