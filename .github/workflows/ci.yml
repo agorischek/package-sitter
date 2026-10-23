@@ -38,7 +38,7 @@ jobs:
     name: Smoke ${{ matrix.fixture }}
     needs: prepare
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
@@ -65,7 +65,24 @@ jobs:
       - name: Audit fixture
         env:
           FIXTURE: ${{ matrix.fixture }}
-        run: npm audit --audit-level=high --omit=dev --prefix "fixtures/$FIXTURE"
+        run: |
+          for attempt in 1 2 3; do
+            if output="$(npm audit --audit-level=high --omit=dev --prefix "fixtures/$FIXTURE" 2>&1)"; then
+              printf '%s\n' "$output"
+              exit 0
+            fi
+
+            printf '%s\n' "$output" >&2
+            if ! grep -Eq 'audit endpoint returned an error|503 Service Unavailable|EAI_AGAIN|ECONNRESET' <<<"$output"; then
+              exit 1
+            fi
+
+            if [ "$attempt" -eq 3 ]; then
+              exit 1
+            fi
+
+            sleep "$((attempt * 15))"
+          done
 
       - name: Smoke test fixture
         env:
