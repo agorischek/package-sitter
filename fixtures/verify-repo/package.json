@@ -3,5 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs verify-repo" },
-  "dependencies": { "verify-repo": "0.0.11" }
+  "dependencies": { "verify-repo": "0.0.11" },
+  "overrides": { "verify-repo": { "glob": "14.0.2" } }
 }
