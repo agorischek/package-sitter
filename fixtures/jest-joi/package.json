@@ -9,11 +9,9 @@
     "joi": "18.3.0"
   },
   "overrides": {
-    "minimatch@3.1.5": {
-      "brace-expansion": "1.1.18"
-    },
-    "minimatch@9.0.9": {
-      "brace-expansion": "2.1.4"
+    "minimatch": "11.0.1",
+    "test-exclude": {
+      "glob": "14.0.2"
     }
   }
 }
