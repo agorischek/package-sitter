@@ -3,5 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs dollarlint" },
-  "dependencies": { "dollarlint": "0.1.26" }
+  "dependencies": { "dollarlint": "0.1.26" },
+  "overrides": { "basic-ftp": "6.2.1" }
 }
