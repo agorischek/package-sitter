@@ -50,8 +50,7 @@ export async function smoke(importedPackageName, imported, auxiliary = {}) {
       break;
     case "emj": {
       const json = '{"name":"Emojion"}';
-      const value = JSON.parse(json);
-      assert.deepEqual(imported.default.parse(imported.default.stringify(value)), value);
+      assert.equal(imported.default.parse(imported.default.generate(json)), json);
       break;
     }
     case "@e-n-v/env":
