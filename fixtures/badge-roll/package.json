@@ -3,5 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": { "test": "node ../../scripts/smoke.mjs badge-roll" },
-  "dependencies": { "badge-roll": "0.1.0" }
+  "dependencies": { "badge-roll": "0.1.0" },
+  "overrides": { "badge-roll": { "glob": "14.0.2" } }
 }
